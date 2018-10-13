@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @story.date %>
+</p>
+
+<p>
+  <strong>Reporter:</strong>
+  <%= @story.reporter %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @story.group %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @story.subtitle %>
+</p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @story.quote %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @story.body %>
+</p>
+
+<p>
+  <strong>Char count:</strong>
+  <%= @story.char_count %>
+</p>
+
+<p>
+  <strong>Draft:</strong>
+  <%= @story.draft %>
+</p>
+
+<p>
+  <strong>Sent:</strong>
+  <%= @story.sent %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @story.user %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @story.page %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @story.order %>
+</p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @story.path %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

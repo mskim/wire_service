@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-10-13
+  reporter: MyString
+  group: MyString
+  title: MyString
+  subtitle: MyString
+  quote: MyString
+  body: MyText
+  char_count: 1
+  draft: false
+  sent: 2018-10-13 16:09:39
+  user: one
+  page: 1
+  order: 1
+  path: MyString
+
+two:
+  date: 2018-10-13
+  reporter: MyString
+  group: MyString
+  title: MyString
+  subtitle: MyString
+  quote: MyString
+  body: MyText
+  char_count: 1
+  draft: false
+  sent: 2018-10-13 16:09:39
+  user: two
+  page: 1
+  order: 1
+  path: MyString

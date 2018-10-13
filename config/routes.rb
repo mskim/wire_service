@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :stories
   get 'home/welcome'
   get 'home/about'
   resources :yh_pictures
