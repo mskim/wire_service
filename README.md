@@ -28,10 +28,11 @@ story
  - quote
  - body
  - char_count
- - selected
- - ready:boolean
+ - draft:boolean
+ - sent:boolean
+
  - working_article_id
- - user_id
+ - user:references
  - page
  - order
 
