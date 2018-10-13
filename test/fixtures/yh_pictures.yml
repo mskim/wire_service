@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  action: MyString
+  service_type: MyString
+  content_id: MyString
+  date: 2018-10-13
+  time: 2018-10-13 14:16:35
+  urgency: MyString
+  category: MyString
+  class_code: MyString
+  attriubute_code: MyString
+  source: MyString
+  credit: MyString
+  region: MyString
+  title: MyString
+  subtile: MyString
+  body: MyString
+  picture: MyString
+  taken_by: MyString
+  selected: false
+  group: MyString
+  page: MyString
+
+two:
+  action: MyString
+  service_type: MyString
+  content_id: MyString
+  date: 2018-10-13
+  time: 2018-10-13 14:16:35
+  urgency: MyString
+  category: MyString
+  class_code: MyString
+  attriubute_code: MyString
+  source: MyString
+  credit: MyString
+  region: MyString
+  title: MyString
+  subtile: MyString
+  body: MyString
+  picture: MyString
+  taken_by: MyString
+  selected: false
+  group: MyString
+  page: MyString

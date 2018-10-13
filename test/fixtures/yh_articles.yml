@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-10-11
+  time: 2018-10-11 10:27:54
+  category: MyString
+  class_code: MyString
+  source: MyString
+  title: MyString
+  body: MyText
+  writer: MyString
+  taken_by: MyString
+  selected: false
+  group: MyString
+  page: MyString
+
+two:
+  date: 2018-10-11
+  time: 2018-10-11 10:27:54
+  category: MyString
+  class_code: MyString
+  source: MyString
+  title: MyString
+  body: MyText
+  writer: MyString
+  taken_by: MyString
+  selected: false
+  group: MyString
+  page: MyString

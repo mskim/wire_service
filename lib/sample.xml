@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<YNewsML>
+	<Header>
+		<Action>C</Action>
+		<ServiceType>AKR0</ServiceType>
+		<ContentID>AKR20070807170200053</ContentID>
+		<SendDate>20070807</SendDate>
+		<SendTime>171444</SendTime>
+	</Header>
+	<Metadata>
+		<Urgency>3</Urgency>
+		<Category code="07"/>
+		<Credit><![CDATA[YNA]]></Credit>
+		<Source><![CDATA[YNA]]></Source>
+		<Region>
+			<RegionCode code="7003003"/>
+		</Region>
+		<Class>
+			<ClassCode code="0107001"/>
+			<ClassCode code="0707001"/>
+		</Class>
+		<Attribute>
+			<AttributeCode code="9001004"/>
+		</Attribute>			
+		<Issue>
+			<IssueCode/>
+		</Issue>
+		<Embargo>20070808093000</Embargo>
+		<Stock>
+			<StockCode code="123456"/>
+		</Stock>		
+		<Writer><![CDATA[박순기]]></Writer>
+		<Desk code="053"><![CDATA[대구경북취재본부]]></Desk>
+		<DeliCode>L1H1G1</DeliCode>
+	</Metadata>
+	<NewsContent>
+		<LangType>KR</LangType>
+		<Title><![CDATA[대구 첫 전용미술관 9일 착공]]></Title>
+		<SubTitle><![CDATA[대구 첫 전용미술관 착공]]></SubTitle>
+		<Comment><![CDATA[이 기사는 임의로 Element와 내용을 모두 채운 샘플용 기사입니다.]]></Comment>
+		<Body><![CDATA[대구 첫 전용미술관 9일 착공
+
+    (대구=연합뉴스) 박순기 기자 = 대구지역 첫 전용미술관인 대구미술관이 오는 9일 착공된다.
+    7일 대구시에 따르면 수성구 삼덕동에서 김종민 문화관광부 장관과 미술계 인사 등이 참석한 가운데 대구미술관 기공식을 갖는다.
+    2010년 3월 완공 예정인 대구미술관은 대구뮤지엄서비스㈜[123456]가 민간사업자로 참여해 모두 662억원을 들여 부지 7만1천여㎡에 지상 3층.지하 1층, 연면적 2만여㎡규모로 건설한다.
+    시는 협약에 따라 준공 후 20년동안 매년 45억원(국비 30% 포함)을 대구뮤지엄서비스 측에 지불하게 된다.
+    또 미술관 완공 이후 시는 전시실 운영을 맡고 대구뮤지엄서비스는 연회장과 다목적 강당, 식당 등 부대시설을 활용하게 된다.
+    시는 이밖에 1~2년 후 청년작가의 창작활동을 지원하는 청년비엔날레와 시립미술관 프레 오프닝전을 열 계획이다.
+    대구시 안국중 문화예술과장은 "대구에 대규모 전용미술관이 들어서면 미술전시 공간확보에 따라 미술 창작과 전시가 크게 활성화될 것으로 기대한다"고 말했다.
+    parksk@yna.co.kr
+(끝)]]></Body>
+	<AppendData mimetype="image/jpeg">
+            <Title><![CDATA[대구미술관 조감도]]></Title>
+            <Caption><![CDATA[대구지역 첫 전용미술관인 대구미술관]]></Caption>
+            <FileName>PYH2007080704960005300_P2.jpg</FileName>            
+        </AppendData>
+	</NewsContent>
+    <RefContent>
+    	<ContentID>AKR20070807140200053</ContentID>
+    	<Title><![CDATA[대구 '이=펀 2007' 10월25일 개막]]></Title>
+    	<Href>http://www.yonhapnews.co.kr/bulletin/2007/08/07/0200000000AKR20070807140200053.HTML</Href>
+    </RefContent>	
+</YNewsML>

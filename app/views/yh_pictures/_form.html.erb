@@ -1,0 +1,117 @@
+<%= form_with(model: yh_picture, local: true) do |form| %>
+  <% if yh_picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yh_picture.errors.count, "error") %> prohibited this yh_picture from being saved:</h2>
+
+      <ul>
+      <% yh_picture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :action %>
+    <%= form.text_field :action %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_type %>
+    <%= form.text_field :service_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content_id %>
+    <%= form.text_field :content_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.time_select :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :urgency %>
+    <%= form.text_field :urgency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :class_code %>
+    <%= form.text_field :class_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attriubute_code %>
+    <%= form.text_field :attriubute_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit %>
+    <%= form.text_field :credit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.text_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtile %>
+    <%= form.text_field :subtile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_field :body %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :taken_by %>
+    <%= form.text_field :taken_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selected %>
+    <%= form.check_box :selected %>
+  </div>
+
+  <div class="field">
+    <%= form.label :group %>
+    <%= form.text_field :group %>
+  </div>
+
+  <div class="field">
+    <%= form.label :page %>
+    <%= form.text_field :page %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
