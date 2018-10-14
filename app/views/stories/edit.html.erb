@@ -3,4 +3,5 @@
 <%= render 'form', story: @story %>
 
 <%= link_to '보기', @story %> |
-<%= link_to '아전', stories_path %>
+<%= link_to "이전으로", stories_path, method: :get, class: "btn btn-md btn-success" %>
+

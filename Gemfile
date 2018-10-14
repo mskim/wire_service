@@ -67,6 +67,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'nokogiri-happymapper'
 gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 gem 'devise'
 gem 'ransack'
 gem 'rails-assets-trix', source: 'https://rails-assets.org'

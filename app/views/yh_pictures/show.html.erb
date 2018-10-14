@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', yh_pictures_path %>
+<%= link_to "이전으로", yh_pictures_path, method: :get, class: "btn btn-md btn-success" %>
 
 
   <img  src="<%= @yh_picture.preview_path %>" width="100%"></img>
@@ -26,4 +26,5 @@
 </p>
 
 
-<%= link_to 'Back', yh_pictures_path %>
+<%= link_to "이전으로", yh_pictures_path, method: :get, class: "btn btn-md btn-success" %>
+

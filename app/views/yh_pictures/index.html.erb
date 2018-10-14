@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h3 align="center">연합사진</h3>
 <div align="center">
-  <%= paginate @yh_pictures %>
+  <%= paginate @yh_pictures, :theme => 'twitter-bootstrap-3' %>
 </div>
 <div class="row">
   <% @yh_pictures.each do |yh_picture| %>
@@ -12,6 +12,6 @@
 </div>
 
 <div align="center">
-  <%= paginate @yh_pictures %>
+  <%= paginate @yh_pictures, :theme => 'twitter-bootstrap-3' %>
 </div>
 
