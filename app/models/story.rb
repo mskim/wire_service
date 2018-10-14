@@ -11,7 +11,7 @@
 #  quote      :string
 #  body       :text
 #  char_count :integer
-#  publish      :boolean
+#  publish    :boolean
 #  sent       :time
 #  user_id    :integer
 #  page       :integer
@@ -30,7 +30,7 @@ private
   def count_chars
     self.char_count = body.length
   end
-  
+
   def set_atts
     self.group    = user.group
     self.reporter = user.name
