@@ -17,7 +17,7 @@ class StoriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create story" do
     assert_difference('Story.count') do
-      post stories_url, params: { story: { body: @story.body, char_count: @story.char_count, date: @story.date, draft: @story.draft, group: @story.group, order: @story.order, page: @story.page, path: @story.path, quote: @story.quote, reporter: @story.reporter, sent: @story.sent, subtitle: @story.subtitle, title: @story.title, user_id: @story.user_id } }
+      post stories_url, params: { story: { body: @story.body, char_count: @story.char_count, date: @story.date, publish: @story.publish, group: @story.group, order: @story.order, page: @story.page, path: @story.path, quote: @story.quote, reporter: @story.reporter, sent: @story.sent, subtitle: @story.subtitle, title: @story.title, user_id: @story.user_id } }
     end
 
     assert_redirected_to story_url(Story.last)
@@ -34,7 +34,7 @@ class StoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update story" do
-    patch story_url(@story), params: { story: { body: @story.body, char_count: @story.char_count, date: @story.date, draft: @story.draft, group: @story.group, order: @story.order, page: @story.page, path: @story.path, quote: @story.quote, reporter: @story.reporter, sent: @story.sent, subtitle: @story.subtitle, title: @story.title, user_id: @story.user_id } }
+    patch story_url(@story), params: { story: { body: @story.body, char_count: @story.char_count, date: @story.date, publish: @story.publish, group: @story.group, order: @story.order, page: @story.page, path: @story.path, quote: @story.quote, reporter: @story.reporter, sent: @story.sent, subtitle: @story.subtitle, title: @story.title, user_id: @story.user_id } }
     assert_redirected_to story_url(@story)
   end
 

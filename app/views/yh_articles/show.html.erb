@@ -1,64 +1,52 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>날자:</strong>
   <%= @yh_article.date %>
 </p>
 
 <p>
-  <strong>Time:</strong>
+  <strong>시간:</strong>
   <%= @yh_article.time %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>카테고리:</strong>
   <%= @yh_article.category %>
 </p>
 
 <p>
-  <strong>Class code:</strong>
+  <strong>크라스:</strong>
   <%= @yh_article.class_code %>
 </p>
 
 <p>
-  <strong>Source:</strong>
-  <%= @yh_article.source %>
-</p>
-
-<p>
-  <strong>Title:</strong>
+  <strong>제목:</strong>
   <%= @yh_article.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>본문:</strong>
   <%= @yh_article.body %>
 </p>
 
 <p>
-  <strong>Writer:</strong>
+  <strong>자수:</strong>
+  <%= @yh_article.char_count %>
+</p>
+
+<p>
+  <strong>저자:</strong>
   <%= @yh_article.writer %>
 </p>
 
 <p>
-  <strong>Taken by:</strong>
+  <strong>선택:</strong>
   <%= @yh_article.taken_by %>
 </p>
 
-<p>
-  <strong>Selected:</strong>
-  <%= @yh_article.selected %>
-</p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @yh_article.group %>
-</p>
 
-<p>
-  <strong>Page:</strong>
-  <%= @yh_article.page %>
-</p>
 
 <%= link_to 'Edit', edit_yh_article_path(@yh_article) %> |
 <%= link_to 'Back', yh_articles_path %>

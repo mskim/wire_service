@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: stories
+#
+#  id         :integer          not null, primary key
+#  date       :date
+#  reporter   :string
+#  group      :string
+#  title      :string
+#  subtitle   :string
+#  quote      :string
+#  body       :text
+#  char_count :integer
+#  publish      :boolean
+#  sent       :time
+#  user_id    :integer
+#  page       :integer
+#  order      :integer
+#  path       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
@@ -9,7 +32,7 @@ one:
   quote: MyString
   body: MyText
   char_count: 1
-  draft: false
+  publish: false
   sent: 2018-10-13 16:09:39
   user: one
   page: 1
@@ -25,7 +48,7 @@ two:
   quote: MyString
   body: MyText
   char_count: 1
-  draft: false
+  publish: false
   sent: 2018-10-13 16:09:39
   user: two
   page: 1

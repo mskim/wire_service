@@ -1,5 +1,33 @@
-class YhArticle < ApplicationRecord
+# == Schema Information
+#
+# Table name: yh_articles
+#
+#  id              :integer          not null, primary key
+#  action          :string
+#  service_type    :string
+#  content_id      :string
+#  date            :date
+#  time            :time
+#  urgency         :string
+#  category        :string
+#  class_code      :string
+#  attriubute_code :string
+#  source          :string
+#  credit          :string
+#  region          :string
+#  title           :string
+#  body            :text
+#  writer          :string
+#  taken_by        :string
+#  selected        :boolean
+#  group           :string
+#  page            :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
 
+class YhArticle < ApplicationRecord
+    before_create :count_chars
     def source_folder
         File.expand_path("~/Download/wire_source/102_KOR_TEXT/20181010") 
     end
@@ -21,5 +49,10 @@ class YhArticle < ApplicationRecord
 
     def self.parse_xml(xml_path)
         # puts "xml_path:#{xml_path}"
+    end
+
+    private
+    def count_chars
+      self.char_count = body.length
     end
 end

@@ -28,7 +28,7 @@ story
  - quote
  - body
  - char_count
- - draft:boolean
+ - publish:boolean
  - sent:boolean
 
  - working_article_id

@@ -9,7 +9,7 @@ class CreateStories < ActiveRecord::Migration[5.2]
       t.string :quote
       t.text :body
       t.integer :char_count
-      t.boolean :draft
+      t.boolean :publish
       t.time :sent
       t.references :user, foreign_key: true
       t.integer :page

@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
-<h3>연합사진</h3>
+<h3 align="center">연합사진</h3>
 <div align="center">
   <%= paginate @yh_pictures %>
 </div>
 <div class="row">
   <% @yh_pictures.each do |yh_picture| %>
     <div class="col-md-2">
-      <img width ="100%" height="200px" src="<%=yh_picture.thumb_path %>"/>
+      <img  src="<%=yh_picture.thumb_path %>"/>
     </div>
   <% end %>
 </div>

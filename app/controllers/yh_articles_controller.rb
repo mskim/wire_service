@@ -1,6 +1,6 @@
 class YhArticlesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_yh_article, only: [:show, :edit, :update, :destroy]
-
   # GET /yh_articles
   # GET /yh_articles.json
   def index
@@ -64,6 +64,7 @@ class YhArticlesController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_yh_article
       @yh_article = YhArticle.find(params[:id])

@@ -1,4 +1,5 @@
 class YhPicturesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_yh_picture, only: [:show, :edit, :update, :destroy]
 
   # GET /yh_pictures

@@ -17,16 +17,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :reporter %>
-    <%= form.text_field :reporter %>
-  </div>
-
-  <div class="field">
-    <%= form.label :group %>
-    <%= form.text_field :group %>
-  </div>
-
-  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
@@ -37,48 +27,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :quote %>
-    <%= form.text_field :quote %>
-  </div>
-
-  <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, cols: 60, rows: 30 %>
   </div>
 
   <div class="field">
-    <%= form.label :char_count %>
-    <%= form.number_field :char_count %>
-  </div>
-
-  <div class="field">
-    <%= form.label :draft %>
-    <%= form.check_box :draft %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sent %>
-    <%= form.time_select :sent %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :page %>
-    <%= form.number_field :page %>
-  </div>
-
-  <div class="field">
-    <%= form.label :order %>
-    <%= form.number_field :order %>
-  </div>
-
-  <div class="field">
-    <%= form.label :path %>
-    <%= form.text_field :path %>
+    <%= form.label :publish %>
+    <%= form.check_box :publish %>
   </div>
 
   <div class="actions">

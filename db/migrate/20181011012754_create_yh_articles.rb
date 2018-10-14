@@ -16,6 +16,7 @@ class CreateYhArticles < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.string :writer
+      t.integer :char_count
       t.string :taken_by
       t.boolean :selected
       t.string :group

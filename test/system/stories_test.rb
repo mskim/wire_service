@@ -17,7 +17,7 @@ class StoriesTest < ApplicationSystemTestCase
     fill_in "Body", with: @story.body
     fill_in "Char Count", with: @story.char_count
     fill_in "Date", with: @story.date
-    fill_in "Draft", with: @story.draft
+    fill_in "publish", with: @story.publish
     fill_in "Group", with: @story.group
     fill_in "Order", with: @story.order
     fill_in "Page", with: @story.page
@@ -41,7 +41,7 @@ class StoriesTest < ApplicationSystemTestCase
     fill_in "Body", with: @story.body
     fill_in "Char Count", with: @story.char_count
     fill_in "Date", with: @story.date
-    fill_in "Draft", with: @story.draft
+    fill_in "publish", with: @story.publish
     fill_in "Group", with: @story.group
     fill_in "Order", with: @story.order
     fill_in "Page", with: @story.page
