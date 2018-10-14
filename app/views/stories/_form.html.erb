@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :date %>
+    <%= form.label :날자 %>
     <%= form.date_select :date %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :제목 %>
     <%= form.text_field :title %>
   </div>
 
@@ -27,16 +27,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label :본문 %>
     <%= form.text_area :body, cols: 60, rows: 30 %>
   </div>
 
   <div class="field">
-    <%= form.label :publish %>
+    <%= form.label :출고 %>
     <%= form.check_box :publish %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "저장" %>
   </div>
 <% end %>

@@ -6,8 +6,12 @@
 <div class="row">
   <% @yh_pictures.each do |yh_picture| %>
     <div class="col-md-2">
-      <img  src="<%=yh_picture.thumb_path %>"/>
+      <a href="<%=  yh_picture_path(yh_picture) %>"><img  src="<%= yh_picture.thumb_path %>" width="100%"></img></a>
     </div>
   <% end %>
+</div>
+
+<div align="center">
+  <%= paginate @yh_pictures %>
 </div>
 
