@@ -1,12 +1,21 @@
 <p id="notice"><%= notice %></p>
 <h3 align="center">연합사진</h3>
+<%= search_form_for @q do |f| %>
+<%= f.label '카테고리에 포함된 글자로' %>
+<%= f.search_field :category_cont %>
+<%= f.label '클라스에 포함된 글자로' %>
+<%= f.search_field :class_code_cont %>
+<%= f.submit %>
+<% end %>
+<br>
+
 <div align="center">
   <%= paginate @yh_pictures, :theme => 'twitter-bootstrap-3' %>
 </div>
 <div class="row">
   <% @yh_pictures.each do |yh_picture| %>
     <div class="col-md-2">
-      <a href="<%=  yh_picture_path(yh_picture) %>"><img  src="<%= yh_picture.thumb_path %>" width="100%"></img></a>
+      <a href="<%=  yh_picture_path(yh_picture) %>"><img style="object-fit:cover",  src="<%= yh_picture.thumb_path %>" width="200px" height="200px"></img></a>
     </div>
   <% end %>
 </div>

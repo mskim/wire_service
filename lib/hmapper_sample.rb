@@ -17,33 +17,79 @@ class Header
     h[:action] = self.Action if self.Action
     h[:service_type] = self.ServiceType if self.ServiceType
     h[:content_id] = self.ContentID if self.ContentID
-    h[:send_date] = self.SendDate if self.SendDate
-    h[:send_time] = self.SendTime if self.SendTime
+    h[:date] = self.SendDate if self.SendDate
+    h[:time] = self.SendTime if self.SendTime
     h
   end
 end
 #
+class Category
+  include HappyMapper
+  tag 'Category'
+
+  attribute :code, String, tag: 'code'
+  attribute :name, String, tag: 'name'
+
+  def to_hash
+    h = {}
+    h[:code]     = self.code if self.code
+    h[:name]     = self.name if self.name
+    h
+  end
+end
+
+class ClassCode
+  include HappyMapper
+  tag 'ClassCode'
+  attribute :code, String, tag: 'code'
+  attribute :name, String, tag: 'name'
+  def to_hash
+    h = {}
+    h[:code]     = self.code if self.code
+    h[:name]     = self.name if self.name
+    h
+  end
+end
+
+class Class
+  include HappyMapper
+  tag 'Class'
+  has_many :class_codes, ClassCode
+
+  def to_hash
+    h = []
+    class_codes.each do |class_code|
+      h << class_code.to_hash 
+    end
+    # h[:class_code]     = self.class_code if self.class_code
+    h
+  end
+
+end
+
 class Metadata
   include HappyMapper
   tag 'Metadata'
   has_one :Urgency, String
-  has_one :Category, String
+  has_one :Category, Category
   has_one :Region, String
-  has_many :Class, String, tag: 'Class'
+  has_one :Class, Class, tag: 'Class'
   has_one :Credit, String
   has_one :Source, String
 
   def to_hash
     h = {}
     h[:urgency] = self.Urgency if self.Urgency
-    h[:categorh] = self.Category if self.Category
+    h[:category] = self.Category.to_hash if self.Category
     h[:region] = self.Region if self.Urgency
-    h[:class] = self.Class if self.Class
+    h[:class] = self.Class.to_hash if self.Class
     h[:credit] = self.Credit if self.Credit
     h[:source] = self.Source if self.Source
     h
   end
 end
+
+
 
 class NewsContent
   include HappyMapper
@@ -84,14 +130,20 @@ end
 
 # ytm = YNewsML.parse(YTM_XML)
 # puts ytm.to_hash
-directory = File.dirname(__FILE__)
-Dir.glob("#{directory}/*.xml").each do |f|
-  xml = File.open(f, 'r'){|f| f.read}
-  yml = YNewsML.parse(xml).to_hash.to_yaml
-  puts yml
-  # yml_path = f.sub(".xml", ".yml")
-  # File.open(yml_path, 'w'){|f| f.write yml}
-end
+directory = "/Users/mskim/Development/rails5/wire_service/public/wire_source/101_KOR/20181010"
+puts File.exist? directory
+xml_file = Dir.glob("#{directory}/*.xml").first
+# puts xml_file
+xml = File.open(xml_file, 'r'){|f| f.read}
+puts yml = YNewsML.parse(xml).to_hash
+
+# Dir.glob("#{directory}/*.xml").each do |f|
+#   xml = File.open(f, 'r'){|f| f.read}
+#   yml = YNewsML.parse(xml).to_hash
+#   puts yml
+#   # yml_path = f.sub(".xml", ".yml")
+#   # File.open(yml_path, 'w'){|f| f.write yml}
+# end
 
 
 # describe YNewsML do
@@ -104,3 +156,13 @@ end
 #     # expect(parser).to be_instance_of(Hash)
 #   end
 # end
+
+
+# require 'active_support/core_ext'
+# require 'xml/to/json'
+# require 'json'
+# xml = Nokogiri::XML xml
+# puts JSON.pretty_generate(xml.root) # Use xml for information about the document, like DTD and stuff
+
+
+# npm install -g xml2json-cli

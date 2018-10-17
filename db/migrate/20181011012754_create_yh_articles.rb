@@ -5,7 +5,7 @@ class CreateYhArticles < ActiveRecord::Migration[5.2]
       t.string :service_type
       t.string :content_id
       t.date :date
-      t.time :time
+      t.string :time
       t.string :urgency
       t.string :category
       t.string :class_code

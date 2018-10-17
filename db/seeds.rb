@@ -21,27 +21,74 @@ class Header
   end
 end
 #
+class Category
+  include HappyMapper
+  tag 'Category'
+
+  attribute :code, String, tag: 'code'
+  attribute :name, String, tag: 'name'
+
+  def to_s
+    # h = {}
+    # h[:code]     = self.code if self.code
+    s  = ""
+    s  = self.name if self.name
+    s
+  end
+end
+
+class ClassCode
+  include HappyMapper
+  tag 'ClassCode'
+  attribute :code, String, tag: 'code'
+  attribute :name, String, tag: 'name'
+  def to_hash
+    h = {}
+    h[:code]     = self.code if self.code
+    h[:name]     = self.name if self.name
+    h
+  end
+end
+
+class Class
+  include HappyMapper
+  tag 'Class'
+  has_many :class_codes, ClassCode
+
+  def to_hash
+    h = []
+    class_codes.each do |class_code|
+      h << class_code.to_hash 
+    end
+    # h[:class_code]     = self.class_code if self.class_code
+    h
+  end
+
+end
+
 class Metadata
   include HappyMapper
   tag 'Metadata'
   has_one :Urgency, String
-  has_one :Category, String
+  has_one :Category, Category
   has_one :Region, String
-  has_many :Class, String, tag: 'Class'
+  has_one :Class, Class, tag: 'Class'
   has_one :Credit, String
   has_one :Source, String
 
   def to_hash
     h = {}
     h[:urgency] = self.Urgency if self.Urgency
-    h[:category] = self.Category if self.Category
-    h[:region] = self.Region if self.Region
-    h[:class_code] = self.Class if self.Class
+    h[:category] = self.Category.to_s if self.Category
+    h[:region] = self.Region if self.Urgency
+    h[:class_code] = self.Class.to_hash if self.Class
     h[:credit] = self.Credit if self.Credit
     h[:source] = self.Source if self.Source
     h
   end
 end
+
+
 
 class NewsContent
   include HappyMapper
@@ -50,6 +97,7 @@ class NewsContent
   has_one :Subtitle, String
   has_one :Body, String
   has_one :MultiMedia, String
+
 
   def to_hash
     h = {}
@@ -76,6 +124,7 @@ class YNewsML
     h
   end
 end
+#
 
 source = "#{Rails.root}/public/wire_source/101_KOR/20181010"
 puts "parsing 101_KOR/20181010..."

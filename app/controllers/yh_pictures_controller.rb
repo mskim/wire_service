@@ -5,9 +5,9 @@ class YhPicturesController < ApplicationController
   # GET /yh_pictures
   # GET /yh_pictures.json
   def index
-    # @yh_pictures = YhPicture.all
-    @yh_pictures = YhPicture.order(:date).page(params[:page]).per(40)
-
+    @q = YhPicture.ransack(params[:q])
+    @yh_pictures = @q.result
+    @yh_pictures = @yh_pictures.order(:date).page(params[:page]).per(20)
   end
 
   # GET /yh_pictures/1

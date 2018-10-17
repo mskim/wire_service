@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_072907) do
     t.string "service_type"
     t.string "content_id"
     t.date "date"
-    t.time "time"
+    t.string "time"
     t.string "urgency"
     t.string "category"
     t.string "class_code"
